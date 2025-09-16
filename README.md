@@ -65,8 +65,8 @@ Week 7: Model evaluation, comparison, Finalize report And presentation
 
 #  Project Management Links
 
-Asana Board: [Insert link]
+Asana Board: https://app.asana.com/1/952672460738672/home
 
-Team Tracker: [Insert link]
+Team Tracker: Google Team Tracker: https://docs.google.com/document/d/1qofAxfuphcOQq7hDjpywJZcLZWMrW7p8V7HbUe37wCE/edit?usp=sharing
 
 
