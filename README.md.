@@ -1,0 +1,74 @@
+Fraud Detection in Financial Transactions
+AAI-540 ML Design Document – University of San Diego
+Overview
+This repository contains all code, models, and documentation for our AAI-540 team project on detecting fraudulent credit-card transactions using AWS SageMaker.
+The project implements both Logistic Regression and XGBoost models to identify fraudulent activities, while maintaining high recall and reducing false positives.
+Team Members
+
+Balubhai Sukani (Lead – Model Training & Deployment)
+Anwesha Sarangi (CI/CD & Monitoring)
+Soumi Ray (Documentation & QA)
+
+Environment
+AWS SageMaker (JupyterLab)
+Python 3.10
+Libraries: scikit-learn, xgboost, boto3, pandas, numpy, matplotlib
+Data
+Dataset: Kaggle Credit Card Fraud Detection
+S3 Path: s3://bsukanisagemaker-afresh/aai-540-labs/lab-2-1-fresh/creditcard.csv
+Dataset is anonymized (no PII) and not uploaded here.
+Repository Structure
+
+Fraud-Detection-in-Financial-Transactions/
+├── notebooks/
+├── scripts/
+├── data/
+├── results/
+├── requirements.txt
+├── README.md
+└── AAI-540_ML_Design_Document_Fraud_Detection_Final_with_Cover.docx
+Models
+Model	Recall	Precision	F1	PR-AUC
+Logistic Regression	0.92	0.06	0.11	0.72
+XGBoost	0.83	0.89	0.86	0.88
+Model artifacts are versioned in SageMaker Model Registry:
+v1.0 – logistic_regression_fraud.pkl  
+v2.0 – xgboost_model.pkl
+
+Deployment
+Deployment was designed and tested using AWS SageMaker model objects and an associated inference script (inference.py).
+Due to LabRole restrictions in the learning environment, endpoint deployment was simulated locally using a Python-based function named local_endpoint_predict_df(), which replicates the SageMaker inference process.
+This implementation supports:
+Single and batch predictions from pandas DataFrames
+JSON response format consistent with AWS endpoint behavior
+Integration-ready design for future SageMaker endpoint deployment with IAM-controlled access
+When AWS permissions allow, the same script can be adapted directly for deployment to a real SageMaker endpoint with minimal configuration changes.
+Monitoring
+AWS CloudWatch metrics for latency and error tracking.
+Data drift detection using Population Stability Index (PSI).
+Automated retraining triggers if model performance drops below thresholds:
+Recall < 0.85
+Precision < 0.70
+o
+License
+MIT License
+Design Document
+Download the final ML Design Document (DOCX)
+
+How to Run Locally
+# 1. Clone the repository
+git clone https://github.com/Naturecon/Fraud-Detection-in-Financial-Transactions.gitcd Fraud-Detection-in-Financial-Transactions
+# 2. Install dependencies
+pip install -r requirements.txt
+# 3. Run preprocessing notebook
+jupyter notebook notebooks/data_preprocessing.ipynb
+# 4. Train models
+python scripts/train.py
+# 5. Test local inference (single or batch)
+python scripts/inference.py
+
+Acknowledgments
+This project was developed as part of AAI-540: Machine Learning Operations (MLOps) coursework at the University of San Diego.
+Special thanks to the course instructors for their guidance and feedback.
+
+docs: add project README with deployment and monitoring details
