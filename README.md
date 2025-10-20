@@ -69,4 +69,40 @@ Asana Board: https://app.asana.com/1/952672460738672/home
 
 Team Tracker: Google Team Tracker: https://docs.google.com/document/d/1qofAxfuphcOQq7hDjpywJZcLZWMrW7p8V7HbUe37wCE/edit?usp=sharing
 
+# Fraud Detection in Financial Transactions
+An end-to-end AWS SageMaker ML system for real-time fraud detection using Logistic Regression and XGBoost, designed for interpretability, ethics, and high recall.
 
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![AWS SageMaker](https://img.shields.io/badge/AWS-SageMaker-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/sagemaker/)
+[![Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
+[![License](https://img.shields.io/badge/License-Academic-lightgrey.svg)]()
+
+# Project Overview
+This repository contains the full implementation for **AAI-540 Final Project – Team 4 (Naturecon)**.  
+The project develops a machine learning system to detect fraudulent credit card transactions, featuring:
+
+- Clean, reproducible notebooks (`.ipynb`) aligned with the ML Design Document.  
+- Data stored and versioned in AWS S3.  
+- Models trained and evaluated in AWS SageMaker.  
+- End-to-end workflow: data ingestion → EDA → training → evaluation → deployment simulation.  
+- Both Logistic Regression and XGBoost models optimized for high recall and explainability.
+
+# Quick Links
+ [GitHub Repository](https://github.com/Naturecon/Fraud-Detection-in-Financial-Transactions)
+ [ML Design Document (Deliverable 2)](link-to-your-doc-or-shared-drive)
+ [Code Deliverable (Deliverable 3)](link-to-your-doc-or-shared-drive)
+[Demo Video (Zoom Recording)](link-to-your-video-if-available)
+[Dataset on S3](https://s3.console.aws.amazon.com/s3/buckets/bsukanisagemaker-afresh/aai-540-labs/lab-2-1-fresh/creditcard.csv)
+
+
+# Team 4 – Naturecon
+| Name | Role | Contributions |
+|------|------|----------------|
+| Balubhai Sukani | Team Lead | Model training, deployment, documentation |
+| Anwesha Sarangi | Engineer | CI/CD integration, monitoring setup |
+| Soumi Ray| Analyst | QA, documentation, and demo video |
+
+# Status
+All rubric requirements for Deliverable 3 (Method, ML Design, and Teamwork) are complete and verified.  
+
+This repository serves as a reproducible and ethically aligned ML project demonstrating real-world fraud detection capability.
